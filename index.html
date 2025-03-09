@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front-End Developer</p>
+            <h1>Hi, I'm <span>Madhan Mohan Reddy</span> from Nellore,Andhra Pradesh.</h1>
+        </div>
+    </div>
+</div>
+<!-----------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="1711643324525.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Ambitious Computer Science graduate aiming to secure a position in software engineering. 
+                    Ready to apply my knowledge in coding,softwaare design, and development methodologies to contribute to innovative projects
+                    and enhance my professional skills.</p>
+
+                <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML5 and CSS3</span><br>Structuring and styling Web Applications</li>
+                        <li><span>Javascript</span><br>Making Webpages Interactive,Server side development,Asynchronous Programming and Real time Applications</li>
+                        <li><span>Figma</span><br>Prototyping,UI/UX design</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Url Shorterner App</span><br>Built Url Shorterner application to shorten the url, <br>
+                                to customize the url and generate qr code for url using html, css and javascript</li>
+                        <li><span>E-commerce Website</span><br>Built E-Commerce website using html, css and javascript </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.Tech   2020-2024 </span><br>Audisankara College of Engineering and Technology, Gudur</li>
+                        <li><span>Intermediate   2018-2020</span><br>Krishna Chaithanya Junior College, Nellore</li>
+                        <li><span>SSC  2018</span><br>K.B.R  E M  High School, Nellore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------Skills------------------>
+<div id="Skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="Skills-list">
+            <div>
+                <h2>Html5 and CSS3</h2>
+                <p>Proficient in writing clean and structured HTML5 and styling with CSS3 for web development.</p>
+            </div>
+            <div>
+                <h2>Javascript</h2>
+                <p>Optimized frond-end performance by implementing efficient Javascript algorithms and best practices.</p>
+            </div>
+            <div>
+                <h2>Figma</h2>
+                <p>Familiar with figma's interface and design tools for UI/UX design.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!----------Portfolio------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="url shorterner.jpg" >
+                <div class="layer">
+                    <h3>Url Shortner Website</h3>
+                    <p>This website shortens the url,also we can customize the url and also genrate QR code for Url</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="e commerce.jpg" >
+                <div class="layer">
+                    <h3>E-commerce Website</h3>
+                    <p>This is an E-Commerce website where you can buy the desired items that will be delivered at your Doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!---------contact--------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="Contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p></p>
+                <p>&nbsp;&nbsp;madhanmohanmooli@gmail.com</p>
+                <p>&nbsp;&nbsp;+91 9347956452</p>
+            </div>
+            <a href="chennai resume.pdf"  download class="btn btn2">Download Resume</a>
+            <div class="Contact-Address">
+                <h1 class="sub-title">Address</h1>
+                <p></p>
+                <p>&nbsp;&nbsp;Padarupalli, Near Govt. Hospital</p>
+                <p>&nbsp;&nbsp;Nellore, Andhra Pradesh, India</p>
+                <p>&nbsp;&nbsp;pincode : 524004</p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+</body>
+</html>
